@@ -1,24 +1,20 @@
-import { useState } from 'react'
+import { useOutletContext } from 'react-router-dom'
 import useShoppingItems from '../hooks/useShoppingItems'
 import ItemCard from './ItemCard'
+
 function ShoppingItems() {
-const {loading, items} = useShoppingItems()
+  const {items, setItemToCart, itemToCart} = useOutletContext()
 
-    if(loading) return <h1>Loading...</h1>
-
-    // console.log(items);
-    
-   
-
-    const handleAddCartBtn = (id) => {
-        
-    }
-    
-    
+    // if(loading) return <h1 className='loading'>Loading...</h1>
   return (
     <div className="itemsGrid">
         {items.map((item) => {
-           return <ItemCard  item={item} key={item.id}/>
+           return <ItemCard
+                  item={item}
+                  key={item.id}
+                  itemToCart={itemToCart}
+                  setItemToCart={setItemToCart}
+                  />
         })}
 
     </div>

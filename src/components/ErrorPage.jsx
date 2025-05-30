@@ -1,4 +1,3 @@
-import useShoppingItems from "../hooks/useShoppingItems"
 import { Link } from "react-router-dom"
 function ErrorPage() {
   return (

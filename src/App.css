@@ -40,8 +40,6 @@
   font-size: 22px;
 }
 
-
-
 .counter {
   display: flex;
   align-items: center;
@@ -127,4 +125,26 @@
   padding: 2px ;
   border-radius: 3px;
   transition: 1.4ms ease-in-out;
+}
+
+.cart-icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.cart-count-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 3px 6px;
+}
+
+.cart-icon-container a{
+  text-decoration: none;
+  color: white;
 }

@@ -18,7 +18,7 @@ function useShoppingItems() {
         }
         fetchItems()
       } catch (error) {
-        setError('error')
+        setError('error' + error)
       } finally {
         setLoading(false)
       }
