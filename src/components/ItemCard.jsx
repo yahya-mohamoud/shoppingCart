@@ -1,7 +1,8 @@
-import { useState } from "react";
+import {useState } from "react";
 
 function ItemCard({ item, itemToCart, setItemToCart}) {
   const [quantity, setQuantity] = useState(1)
+
 
   const handleTitle = (title) => {
     if (title.length > 25)
@@ -34,17 +35,17 @@ function ItemCard({ item, itemToCart, setItemToCart}) {
     <div className='item' key={item.id}>
       <img className='itemImg' src={item.image} alt={item.id} />
       <h2>{handleTitle(item.title)}</h2>
-      <h2>${item.price}</h2>
+      <h2>${item.price * quantity}</h2>
       <CounterBtn quantity={quantity} setQuantity={setQuantity}/>
       <button className='cartBtn' onClick={() => addcart(item, quantity)}>Add to Cart</button>
     </div>
   )
 }
 
-const CounterBtn = ({ quantity, setQuantity}) => {
+ const CounterBtn = ({ quantity, setQuantity}) => {
 
   const handleMinusCart = () => {
-    if (quantity > 0) setQuantity(quantity - 1)
+    if (quantity > 1) setQuantity(quantity - 1)
   }
   const handleAddCart = () => {
     setQuantity(quantity + 1)

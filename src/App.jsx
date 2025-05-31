@@ -7,7 +7,6 @@ import { useState } from 'react'
 function App() {
  const { items} = useShoppingItems()
  const [itemToCart, setItemToCart] = useState([])
-
   
   return (
     <div className="mainApp">

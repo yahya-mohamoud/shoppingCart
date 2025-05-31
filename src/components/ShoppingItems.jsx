@@ -1,5 +1,4 @@
 import { useOutletContext } from 'react-router-dom'
-import useShoppingItems from '../hooks/useShoppingItems'
 import ItemCard from './ItemCard'
 
 function ShoppingItems() {

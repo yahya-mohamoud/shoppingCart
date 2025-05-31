@@ -10,6 +10,7 @@ import Mens from './components/Mens.jsx'
 import Women from './components/Womens.jsx'
 import Jewelery from './components/Jewelery.jsx'
 import Electronics from './components/Electronics.jsx'
+import CartPage from './components/CartPage.jsx'
 
 const routes = createBrowserRouter([
   {
@@ -52,6 +53,10 @@ const routes = createBrowserRouter([
       {
         path: '/electronics',
         element: <Electronics />
+      }, 
+      {
+        path: '/cartPage',
+        element: <CartPage />
       }
     ]
   },

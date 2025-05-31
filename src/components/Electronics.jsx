@@ -1,14 +1,14 @@
-import useShoppingItems from '../hooks/useShoppingItems'
 import ItemCard from './ItemCard'
 import '../App.css'
-function Electronics() {
-    const {items} = useShoppingItems()    
+import { useOutletContext } from 'react-router-dom'
 
+function Electronics() {
+  const { items, setItemToCart } = useOutletContext()
   return (
     <div className='itemsGrid'>
        {items && items.map((item) => {
         return (item.category === "electronics")  && 
-       <ItemCard item={item} key={item.id}/>
+       <ItemCard item={item} key={item.id} setItemToCart={setItemToCart}/>
       })}
     </div>
   )

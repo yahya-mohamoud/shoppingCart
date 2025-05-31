@@ -1,14 +1,14 @@
-import useShoppingItems from '../hooks/useShoppingItems'
 import ItemCard from './ItemCard'
 import '../App.css'
+import { useOutletContext } from 'react-router-dom'
 function Jewelery() {
-    const {items} = useShoppingItems()    
+    const {items, setItemToCart} = useOutletContext()    
 
   return (
     <div className='itemsGrid'>
        {items && items.map((item) => {
         return (item.category === "jewelery")  && 
-       <ItemCard item={item} key={item.id}/>
+       <ItemCard item={item} key={item.id} setItemToCart={setItemToCart}/>
       })}
     </div>
   )

@@ -4,11 +4,6 @@ import { NavLink } from "react-router-dom"
 
 function Header({ itemToCart }) {
     const totalItems = itemToCart.reduce((sum, item) => sum + item.count, 0)
-
-    const handleCartElmnt = () => {
-
-    }
-
     return (
         <div className="container">
             <div className="hero">
@@ -17,7 +12,7 @@ function Header({ itemToCart }) {
                     <li><NavLink to={'/'} className={({ isActive }) => isActive ? "active" : ''}>Home</NavLink></li>
                     <li><NavLink to={'/shop'} className={({ isActive }) => isActive ? "active" : ''}>Shop</NavLink></li>
                     <div className="cart-icon-container">
-                       <NavLink  to={''}><FontAwesomeIcon icon={faCartShopping} /></NavLink>
+                       <NavLink  to={'/cartPage'}><FontAwesomeIcon icon={faCartShopping} /></NavLink>
                         {totalItems > 0 && (
                             <span className="cart-count-badge">{totalItems}</span>
                         )}
