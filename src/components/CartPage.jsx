@@ -1,10 +1,15 @@
 import React from 'react'
-import { useOutletContext } from 'react-router-dom'
+import { useNavigate, useOutletContext } from 'react-router-dom'
 import { useState, useEffect } from 'react';
 
 function CartPage() {
   const { itemToCart } = useOutletContext()
   const [cartItems, setCartItems] = useState([]);
+
+  const navigate = useNavigate()
+  if(itemToCart.length === 0) {
+    navigate('/')
+  }
 
   useEffect(() => {
     setCartItems(itemToCart || []);
@@ -13,8 +18,6 @@ function CartPage() {
   const handleAdd = (item) => {
     
   const updated = cartItems.map((i) => {
-    console.log(i);
-    
     if (i.id === item.id) {
       return { ...i, count: i.count + 1 };
     }
@@ -43,7 +46,7 @@ function CartPage() {
             <img src={singleItem.image} alt={singleItem.category} />
             <div className="oneItem">
               <h2>{singleItem.title}</h2>
-              <h2>${Math.floor(singleItem.price * singleItem.count)}</h2>
+              <h2>${Math.floor(singleItem.price * singleItem.count) + ".99"}</h2>
               <div className='item-count'>
                 <button onClick={() => handleMinus(singleItem)}>-</button>
                 <span>{singleItem.count}</span>

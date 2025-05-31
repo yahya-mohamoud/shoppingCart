@@ -25,7 +25,6 @@ function ItemCard({ item, itemToCart, setItemToCart}) {
 
       
     });
-      console.log(itemToCart);
       
       setQuantity(1)
   }
@@ -35,7 +34,7 @@ function ItemCard({ item, itemToCart, setItemToCart}) {
     <div className='item' key={item.id}>
       <img className='itemImg' src={item.image} alt={item.id} />
       <h2>{handleTitle(item.title)}</h2>
-      <h2>${item.price * quantity}</h2>
+      <h2>${Math.floor(item.price * quantity) + '.99'}</h2>
       <CounterBtn quantity={quantity} setQuantity={setQuantity}/>
       <button className='cartBtn' onClick={() => addcart(item, quantity)}>Add to Cart</button>
     </div>
