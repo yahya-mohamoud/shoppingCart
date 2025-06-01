@@ -86,8 +86,8 @@ body {
 
 /* Categories */
 .categoriesList {
-  background-color: #111;
-  padding: 0.6rem 1rem;
+  background-color: #111111ec;
+  padding: 0.4rem 1rem;
   border-top: 1px solid #444;
 }
 
@@ -95,6 +95,7 @@ body {
   color: white;
   font-size: 20px;
   margin-bottom: 6px;
+  text-align: center;
 }
 
 .categoriesList ul {

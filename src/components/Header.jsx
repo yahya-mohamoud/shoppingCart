@@ -21,10 +21,9 @@ function Header({ itemToCart }) {
 
             </div>
             <div className="categoriesList">
-                <h2>Categories</h2>
                 <ul>
                     <li>
-                        <NavLink to='/all' className={({ isActive }) => isActive ? "active" : ''}>All Products</NavLink>
+                        <NavLink to='/allProducts' className={({ isActive }) => isActive ? "active" : ''}>All Products</NavLink>
                     </li>
                     <li>
                         <NavLink to='/mens' className={({ isActive }) => isActive ? "active" : ''}>Men's Clothing</NavLink>

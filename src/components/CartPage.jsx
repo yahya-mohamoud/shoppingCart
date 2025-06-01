@@ -1,6 +1,5 @@
 import { useOutletContext, NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react';
-import ItemCard from './ItemCard';
 
 function CartPage() {
   const { itemToCart, setItemToCart } = useOutletContext()

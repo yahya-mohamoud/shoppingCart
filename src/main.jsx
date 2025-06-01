@@ -31,7 +31,7 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />
       },
       {
-        path: '/all',
+        path: '/allProducts',
         element: <ShoppingItems />
       },
       {
