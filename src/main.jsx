@@ -31,18 +31,14 @@ const routes = createBrowserRouter([
         errorElement: <ErrorPage />
       },
       {
-          path: '*',
-          element: <ErrorPage />
-      },
-      {
-          path: '/all',
-          element: <ShoppingItems />
+        path: '/all',
+        element: <ShoppingItems />
       },
       {
         path: '/mens',
         element: <Mens />
       },
-       {
+      {
         path: '/womens',
         element: <Women />
       }, 
@@ -57,7 +53,11 @@ const routes = createBrowserRouter([
       {
         path: '/cartPage',
         element: <CartPage />
-      }
+      },
+      {
+          path: '*',
+          element: <ErrorPage />
+      },
     ]
   },
   

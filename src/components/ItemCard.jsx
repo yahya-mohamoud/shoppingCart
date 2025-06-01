@@ -1,6 +1,6 @@
 import {useState } from "react";
 
-function ItemCard({ item, itemToCart, setItemToCart}) {
+function ItemCard({ item, setItemToCart}) {
   const [quantity, setQuantity] = useState(1)
 
 

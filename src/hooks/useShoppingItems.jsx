@@ -18,12 +18,12 @@ function useShoppingItems() {
         }
         fetchItems()
       } catch (error) {
-        setError('error' + error)
+        setError(error)
       } finally {
         setLoading(false)
       }
     
-    }, [])
+    }, [error])
   
     return { loading, error, items}
     }

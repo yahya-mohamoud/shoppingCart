@@ -7,7 +7,7 @@ function Header({ itemToCart }) {
     return (
         <div className="container">
             <div className="hero">
-                <h1>Shoppie</h1>
+                <h1><NavLink to='/'>Shoppie</NavLink></h1>
                 <div className="sideNavLinks">
                     <li><NavLink to={'/'} className={({ isActive }) => isActive ? "active" : ''}>Home</NavLink></li>
                     <li><NavLink to={'/shop'} className={({ isActive }) => isActive ? "active" : ''}>Shop</NavLink></li>
