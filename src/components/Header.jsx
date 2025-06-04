@@ -1,12 +1,17 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
 import { NavLink } from "react-router-dom"
+import image from '../assets/image.png'
 
 function Header({ itemToCart }) {
     return (
         <div className="container">
             <div className="hero">
-                <h1><NavLink to='/'>Shoppie</NavLink></h1>
+                <div className="hero logo">
+                <img src={image} alt=""  style={{width: "40px", height: '40px', borderRadius: '14px'}}/>
+                <h1><NavLink to='/'>
+                Shoppie</NavLink></h1>
+                </div>
                 <div className="sideNavLinks">
                     <li><NavLink to={'/'} className={({ isActive }) => isActive ? "active" : ''}>Home</NavLink></li>
                     <li><NavLink to={'/shop'} className={({ isActive }) => isActive ? "active" : ''}>Shop</NavLink></li>
