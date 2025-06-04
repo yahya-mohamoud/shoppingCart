@@ -3,7 +3,6 @@ import { faCartShopping } from "@fortawesome/free-solid-svg-icons"
 import { NavLink } from "react-router-dom"
 
 function Header({ itemToCart }) {
-    const totalItems = itemToCart.reduce((sum, item) => sum + item.count, 0)
     return (
         <div className="container">
             <div className="hero">
@@ -13,8 +12,8 @@ function Header({ itemToCart }) {
                     <li><NavLink to={'/shop'} className={({ isActive }) => isActive ? "active" : ''}>Shop</NavLink></li>
                     <div className="cart-icon-container">
                        <NavLink  to={'/cartPage'}><FontAwesomeIcon icon={faCartShopping} /></NavLink>
-                        {totalItems > 0 && (
-                            <span className="cart-count-badge">{totalItems}</span>
+                        {itemToCart.length > 0 && (
+                            <span className="cart-count-badge">{itemToCart.length}</span>
                         )}
                     </div>
                 </div>
